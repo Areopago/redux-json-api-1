@@ -528,7 +528,7 @@ export const reducer = handleActions(
               const data = resource.relationships[key].data;
 
               if (data) {
-                if (Array.isArraY(data)) {
+                if (Array.isArray(data)) {
                   relationships[key] = {
                     ...resource.relationships[key],
                     data: data.map((d) => ({
