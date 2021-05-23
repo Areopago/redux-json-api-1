@@ -125,8 +125,8 @@ class ApiResponse {
 
 export const readEndpoint = (
   endpoint,
-  dominio,
   {
+    dominio = "",
     options = {
       indexLinks: undefined,
     },
@@ -517,7 +517,9 @@ export const reducer = handleActions(
         .map((resource) => {
           const result = {
             ...resource,
-            id: payload.dominio ? `${payload.dominio}${resource.id}` : id,
+            id: payload.dominio
+              ? `${payload.dominio}${resource.id}`
+              : resource.id,
           };
 
           if (resource.relationships) {
@@ -531,7 +533,7 @@ export const reducer = handleActions(
                     ...resource.relationships[key],
                     data: data.map((d) => ({
                       ...data,
-                      id: payload.dominio ? `${payload.dominio}${d.id}` : id,
+                      id: payload.dominio ? `${payload.dominio}${d.id}` : d.id,
                     })),
                   };
                 } else {
@@ -539,7 +541,9 @@ export const reducer = handleActions(
                     ...resource.relationships[key],
                     data: {
                       ...data,
-                      id: payload.dominio ? `${payload.dominio}${data.id}` : id,
+                      id: payload.dominio
+                        ? `${payload.dominio}${data.id}`
+                        : data.id,
                     },
                   };
                 }
