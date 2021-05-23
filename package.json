@@ -1,0 +1,73 @@
+{
+  "name": "redux-json-api",
+  "version": "2.2.3",
+  "description": "A bunch of Redux actions, action creators and reducers to integrate with a JSON API",
+  "main": "lib/jsonapi1.js",
+  "scripts": {
+    "build": "rimraf lib && babel ./src -d lib",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "lint": "eslint . ./",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redux-json-api/redux-json-api.git"
+  },
+  "keywords": [
+    "redux",
+    "json",
+    "api",
+    "jsonapi"
+  ],
+  "author": "Ronni Egeriis Persson <ronni@dixie.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redux-json-api/redux-json-api/issues"
+  },
+  "homepage": "https://github.com/redux-json-api/redux-json-api#readme",
+  "peerDependencies": {
+    "redux-thunk": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.10.5",
+    "@babel/runtime": "^7.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "fetch-mock": "^9.10.6",
+    "jest": "^26.3.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "deep-equal": "^2.0.3",
+    "object-path-immutable": "^4.1.0",
+    "pluralize": "^8.0.0",
+    "re-reselect": "^4.0.0",
+    "redux-actions": "^2.6.5",
+    "reselect": "^4.0.0"
+  }
+}
