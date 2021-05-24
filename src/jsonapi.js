@@ -523,7 +523,8 @@ export const reducer = handleActions(
           };
 
           if (resource.relationships) {
-            const relationships = {};
+            const relationships = {...resource.relationships};
+			
             Object.keys(resource.relationships).forEach((key) => {
               const data = resource.relationships[key].data;
 
@@ -550,7 +551,7 @@ export const reducer = handleActions(
               }
             });
 
-            resource.relationships = relationships;
+            result.relationships = relationships;
           }
 
           return result;
