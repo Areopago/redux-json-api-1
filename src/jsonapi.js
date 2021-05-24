@@ -533,7 +533,7 @@ export const reducer = handleActions(
                   relationships[key] = {
                     ...resource.relationships[key],
                     data: data.map((d) => ({
-                      ...data,
+                      ...d,
                       id: payload.dominio ? `${payload.dominio}${d.id}` : d.id,
                     })),
                   };
