@@ -517,6 +517,7 @@ export const reducer = handleActions(
         .map((resource) => {
           const result = {
             ...resource,
+			dominio: payload.dominio ? payload.dominio : '',
             id: payload.dominio
               ? `${payload.dominio}${resource.id}`
               : resource.id,
