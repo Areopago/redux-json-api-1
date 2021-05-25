@@ -117,9 +117,9 @@ class ApiResponse {
   }
 
   /* eslint-disable */
-  loadNext = () => this.dispatch(readEndpoint(this.nextUrl));
+  loadNext = (dominio='') => this.dispatch(readEndpoint(this.nextUrl,{dominio}));
 
-  loadPrev = () => this.dispatch(readEndpoint(this.prevUrl));
+  loadPrev = (dominio='') => this.dispatch(readEndpoint(this.prevUrl,{dominio}));
   /* eslint-enable */
 }
 
